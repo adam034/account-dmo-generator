@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
 
 export function generateRandomUser(domain: string) {
-  const randomNumber = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+  const randomNumber = Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
   return {
     address: `${faker.person
       .firstName()

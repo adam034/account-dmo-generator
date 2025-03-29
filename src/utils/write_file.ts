@@ -2,7 +2,12 @@ import ExcelJS from "exceljs";
 import fs from "fs";
 
 export async function exportToCsv(
-  datas: { email: string; password: string; link: string }[],
+  datas: {
+    email: string | undefined;
+    password_mail: string | undefined;
+    user_id_game: string | undefined;
+    password_game: string | undefined;
+  }[],
   filePath: string
 ) {
   const workbook = new ExcelJS.Workbook();
@@ -10,7 +15,9 @@ export async function exportToCsv(
 
   worksheet.columns = [
     { header: "Email", key: "email", width: 10 },
-    { header: "Password", key: "password", width: 32 },
+    { header: "Password Email", key: "password_mail", width: 32 },
+    { header: "User ID Game", key: "user_id_game", width: 32 },
+    { header: "Password Game", key: "password_game", width: 32 },
     { header: "Link", key: "link", width: 10, outlineLevel: 1 },
   ];
 

@@ -7,7 +7,7 @@
     "build": "tsc",
     "start": "nodemon",
     "dev": "nodemon --watch src --exec ts-node src/index.ts",
-    "run:prod":"env-cmd -f .env.example node ./dist/index.js"
+    "run:prod": "env-cmd -f .env.example node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -22,8 +22,10 @@
     "@faker-js/faker": "^8.4.1",
     "@sinclair/typebox": "^0.33.7",
     "axios": "^1.7.4",
+    "cheerio": "^1.0.0",
     "dotenv": "^16.4.5",
     "env-cmd": "^10.1.0",
-    "exceljs": "^4.4.0"
+    "exceljs": "^4.4.0",
+    "puppeteer": "^23.1.0"
   }
 }
